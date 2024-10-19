@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_notes_player_app_setup/secreens/home.dart';
 
 void main() {
   runApp(const TunePlayer());
@@ -7,12 +8,11 @@ void main() {
 class TunePlayer extends StatelessWidget {
   const TunePlayer({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(),
+      home: HomeScreen(),
     );
   }
 }
