@@ -5,7 +5,8 @@ class HomeItems extends StatelessWidget {
   final Color tuneColor;
   final String audioPath;
 
-  const HomeItems({super.key, 
+  const HomeItems({
+    super.key,
     required this.tuneColor,
     required this.audioPath,
   });
@@ -24,7 +25,6 @@ class HomeItems extends StatelessWidget {
         },
         child: Container(
           color: tuneColor,
-          height: 100, // Example height
         ),
       ),
     );
