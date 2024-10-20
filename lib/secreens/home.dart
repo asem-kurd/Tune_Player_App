@@ -17,6 +17,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var x = 1;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -29,19 +30,14 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         body: Column(
-          children: getHomeItems(),
+          children: indxerColor
+              .map((e) => HomeItems(
+                    tuneColor: e,
+                    audioPath: "note${x++}.wav",
+                  ))
+              .toList(),
         ),
       ),
     );
-  }
-
-  List<HomeItems> getHomeItems() {
-    int x = 1;
-    List<HomeItems> items = [];
-    for (var colors in indxerColor) {
-      items.add(HomeItems(tuneColor: colors, audioPath: "note$x.wav"));
-      x++;
-    }
-    return items;
   }
 }
